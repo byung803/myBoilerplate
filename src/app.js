@@ -10,12 +10,11 @@ import Router from './router';
 import './styles/styles.scss';
 import 'normalize.css/normalize.css';
 
+const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
 const store = createStore(
     reducer,
-    compose(
-        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-        applyMiddleware(thunk, logger)
-    )
+    composeEnhancer(applyMiddleware(thunk, logger))
 );
 
 ReactDOM.render(

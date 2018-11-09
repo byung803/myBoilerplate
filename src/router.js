@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import Template from './components';
+import CompoIndex from './components';
 
 class Router extends Component {
     render() {
@@ -9,7 +9,7 @@ class Router extends Component {
             <BrowserRouter>
                 <div>
                     <Switch>
-                        <Route path='/' component={Template} />
+                        <Route path='/' component={CompoIndex} />
                     </Switch>
                 </div>
             </BrowserRouter>
